@@ -8,6 +8,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/52903cfb09.js" crossorigin="anonymous"></script>
   <title>Lab1</title>
 </head>
 
@@ -35,11 +37,36 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Пошук" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Знайти</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal">Вхід</button>
     </form>
   </div>
 </nav>
+
+<!-- Modal Sign In Form -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Вхід в систему</h5>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="form-signin">
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" id="inputEmail" class="form-control mb-2" placeholder="Електронна адреса" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control mb-2" placeholder="Пароль" required>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Запам'тати мене
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="button"><i class="fas fa-sign-in-alt"></i>Увійти</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Carousel -->
 <div id="carousel-ex" class="carousel slide" data-ride="carousel">
