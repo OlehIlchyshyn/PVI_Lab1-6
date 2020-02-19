@@ -37,7 +37,14 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal">Вхід</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal">
+        Вхід
+      </button>
+    </form>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#registerModal">
+        Реєстрація
+      </button>
     </form>
   </div>
 </nav>
@@ -62,6 +69,36 @@
             </label>
           </div>
           <button class="btn btn-lg btn-primary btn-block" type="button"><i class="fas fa-sign-in-alt"></i>Увійти</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Register Form -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Реєстрація в системі</h5>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="form-signup">
+          <div class="form-group">
+            <input type="email" class="form-control mb-2" placeholder="Електронна адреса" required autofocus>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control mb-2" placeholder="Пароль" required>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control mb-2" placeholder="Підтвердити пароль" required>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="ОК">
+            <input type="reset" class="btn btn-lg btn-default btn-block" value="Очистити">
+          </div>
+          <p>Уже є аккаунт? <a data-dismiss="modal" data-toggle="modal" href="#loginModal">Увійдіть тут</a></p>
         </form>
       </div>
     </div>
