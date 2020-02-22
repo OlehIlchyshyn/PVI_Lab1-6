@@ -28,6 +28,9 @@ document.getElementsByName("inform").forEach( elmnt => {
             option.text = array[i];
             selectList.appendChild(option);
         }
+        let newOpt = document.createElement("option");
+        selectList.insertBefore(newOpt, selectList.childNodes[3]);
+
         const parent = this.parentNode.parentNode;
         const parentContainer = parent.parentNode;
         selectDiv.appendChild(selectList);
@@ -41,3 +44,26 @@ document.getElementsByName("inform").forEach( elmnt => {
     }
 });
 
+/*
+//Add new row to the table
+let addNewBtn = document.getElementById("addRecord");
+addNewBtn.onclick = () => {
+    let tableRef = document.getElementById("myTableBody");
+    let newRow = tableRef.insertRow();
+    let newCell = newRow.insertCell(-1);
+    let newText = document.createTextNode(document.getElementsByName("bikeName")[0].value);
+    newCell.appendChild(newText);
+    newCell = newRow.insertCell(-1);
+    newText = document.createTextNode(document.getElementsByName("bikeTheftDate")[0].value);
+    newCell.appendChild(newText);
+    newCell = newRow.insertCell(-1);
+    newText = document.createTextNode(document.getElementsByName("bikeTheftPlace")[0].value);
+    newCell.appendChild(newText);
+    newCell = newRow.insertCell(-1);
+    newText = document.createTextNode(document.getElementsByName("bikeTheftDetails")[0].value);
+    newCell.appendChild(newText);
+    newCell = newRow.insertCell(-1);
+    newText = document.createTextNode(document.getElementsByName("contacts")[0].value);
+    newCell.appendChild(newText);
+};
+*/

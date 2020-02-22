@@ -41,13 +41,13 @@
 
 
 
-<!-- Table preview -->
+<!-- Table -->
 <main>
   <div class="container">
     <section class="text-center my-4">
       <div class="text-black-50">
         <h1 class="display-4">Інформація про викрадені велосипеди</h1>
-        <button class="btn btn-lg btn-primary my-3" type="button" data-toggle="modal" data-target="#addNewModal">
+        <button id="addNew" class="btn btn-lg btn-primary my-3" type="button" data-toggle="modal" data-target="#addNewModal">
           Додати інформацію про нову крадіжку
         </button>
       </div>
@@ -63,7 +63,7 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="myTableBody">
           <tr>
             <td>Superbike 3000</td>
             <td>11.22.1963</td>
@@ -134,6 +134,21 @@
     </div>
   </div>
 </div>
+<hr class="">
+<div class="container-fluid">
+  <section class="text-center">
+    <h1>Як вберегти велосипед від крадіжки?</h1>
+    <h2>Ми знаємо відповідь на це питання, і допоможемо вам захистити його</h2>
+  </section>
+  <div class="row">
+    <div id="myDiv" class="col-lg-8 col-sm-12" style="height: 75vh"></div>
+    <div class="col-lg-4 col-sm-12">
+      <p class="col-3text-center">Спершу трішки статистики</p>
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+</div>
 
 <!-- Social networks and copyright -->
 <footer class="bg-dark text-white-50 text-center font-small mt-4 ">
@@ -167,12 +182,15 @@
   </div>
 </footer>
 
-<!-- Custom JS -->
-<script src="js/funcs.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Custom JS -->
+<script src="js/funcs.js"></script>
+<script src="js/styles.js"></script>
+<script src="js/graphics.js"></script>
 </body>
 </html>
