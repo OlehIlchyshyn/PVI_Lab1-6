@@ -20,34 +20,31 @@ draw();
 function buildHistogram() {
     var data = [
         {
-            x: ['0', '5', '10', '20', '30', '40', '100', '200'],
-            y: [1000, 800, 574, 231, 142, 58, 1, 0],
+            x: ['0', '5', '10', '20', '30', '40', '50'],
+            y: [1000, 800, 574, 231, 142, 58, 14],
             type: 'bar'
         }
     ];
     var layout = {
         title: "Залежність кількості крадіжок від товщини тросу, <br>яким прикріплено велосипед",
         xaxis: {
-            type: "log",
-            title: {
-                text: 'К-сть крадіжок',
-                font: {
-                    size: 14
-                }
-            },
-        },
-        yaxis: {
-
             title: {
                 text: 'Товщина (мм)',
                 font: {
                     size: 14
                 }
             },
+        },
+        yaxis: {
+            title: {
+                text: 'К-сть крадіжок',
+                font: {
+                    size: 14
+                }
+            },
         }
     };
-    var config = { responsive: true,
-        displaylogo: false };
-    Plotly.newPlot('myDiv', data, layout, config);
+    var config = { responsive: true, displaylogo: false };
+    Plotly.newPlot('histogramDiv', data, layout, config);
 }
 buildHistogram();

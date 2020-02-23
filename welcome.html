@@ -134,21 +134,28 @@
     </div>
   </div>
 </div>
-<hr class="">
+
+<hr id="splitter1">
+
 <div class="container-fluid">
   <section class="text-center">
-    <h1>Як вберегти велосипед від крадіжки?</h1>
-    <h2>Ми знаємо відповідь на це питання, і допоможемо вам захистити його</h2>
+    <h1 class="display-4">Як вберегти велосипед від крадіжки?</h1>
+    <h3 class="display-5">Ми знаємо відповідь на це питання, і допоможемо вам захистити його</h3>
   </section>
   <div class="row">
-    <div id="myDiv" class="col-lg-8 col-sm-12" style="height: 75vh"></div>
-    <div class="col-lg-4 col-sm-12">
-      <p class="col-3text-center">Спершу трішки статистики</p>
+    <div id="histogramDiv" class="col-lg-8 col-sm-12"></div>
+    <div class="col-lg-4 col-sm-12 text-center my-auto">
+      <h3 class="display-5">Спершу трішки статистики</h3>
+      <p class="mb-0">Як ви можете бачити, чим кращий у вас замок тим більш захищений ваш велосипед :)</p>
+      <p class="mb-1">Отож, ви самі вирішуєте долю свого вєліка</p>
       <canvas id="canvas"></canvas>
     </div>
   </div>
-
 </div>
+
+<a id="showAdvice" title="Показати пораду" data-toggle="tooltip" class="btn btn-primary btn-circle btn-lg">
+  <i class="fas fa-question"></i>
+</a>
 
 <!-- Social networks and copyright -->
 <footer class="bg-dark text-white-50 text-center font-small mt-4 ">
@@ -188,9 +195,13 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Custom JS -->
+<script>
+</script>
 <script src="js/funcs.js"></script>
 <script src="js/styles.js"></script>
 <script src="js/graphics.js"></script>
+<script src="js/ajax.js"></script>
 </body>
 </html>
