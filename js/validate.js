@@ -1,9 +1,9 @@
-let usrPass = $("[name='password']");
-let passConfirm = $("[name='password_confirm']");
+let usrPass = $("#pass");
+let passConfirm = $("#pass_confirm");
 let passError = $("#password_confirm_error");
 function validateSignUp() {
     if (usrPass.val() !== passConfirm.val()){
-        passError.text("Passwords must match!");
+        passError.text("Паролі повинні збігатись!");
         return false;
     }
     return true;
