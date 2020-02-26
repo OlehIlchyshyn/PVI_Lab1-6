@@ -18,14 +18,14 @@ function draw() {
 draw();
 
 function buildHistogram() {
-    var data = [
+    let data = [
         {
             x: ['0', '5', '10', '20', '30', '40', '50'],
             y: [1000, 800, 574, 231, 142, 58, 14],
             type: 'bar'
         }
     ];
-    var layout = {
+    let layout = {
         title: "Залежність кількості крадіжок від товщини тросу, <br>яким прикріплено велосипед",
         xaxis: {
             title: {
