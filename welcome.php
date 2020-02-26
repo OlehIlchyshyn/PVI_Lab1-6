@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+  header("location: index.html");
+  exit;
+}
 require_once "config.php";
 $sql = "SELECT bike_name, theft_date, theft_place, details, contact_info FROM bikedata";
 $q = $pdo->query($sql);
@@ -45,8 +50,11 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
     <ul class="navbar-nav">
       <li class="nav-item">
         <label class="text-light mr-2 mt-2">Темна тема </label>
-        <input name="dark_theme_switch" type="checkbox" checked data-toggle="toggle"
+        <input id="switch" name="dark_theme_switch" type="checkbox" data-toggle="toggle"
           data-onstyle="outline-warning" data-offstyle="outline-info">
+      </li>
+      <li class="nav-item mx-3 ml-5">
+          <a class="nav-link" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"> Вийти </i></a>
       </li>
     </ul>
   </div>
@@ -205,11 +213,10 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <!-- Custom JS -->
-<script>
-</script>
-<script src="js/funcs.js"></script>
 <script src="js/styles.js"></script>
+<script src="js/funcs.js"></script>
 <script src="js/graphics.js"></script>
 <script src="js/ajax.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>

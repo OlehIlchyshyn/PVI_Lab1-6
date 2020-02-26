@@ -9,7 +9,7 @@ $email = $password = "";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
     $password = trim($_POST["password"]);
-    $sql = "SELECT id, email, password FROM users WHERE email = :email";
+    $sql = "SELECT id, email, password, isadmin FROM users WHERE email = :email";
     if ($stmt = $pdo->prepare($sql)) {
         $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
         $param_email = $email;
@@ -23,9 +23,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         session_start();
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
-                        $_SESSION["username"] = $username;
-
-                        header("location: welcome.php");
+                        $_SESSION["email"] = $email;
+                        if ($row["isadmin"]) {
+                            header("location: admin.php");
+                        }
+                        else {
+                            header("location: welcome.php");
+                        }
                     } else {
                         echo "Введено неправильний пароль.";
                     }
