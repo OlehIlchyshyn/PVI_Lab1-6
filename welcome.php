@@ -81,7 +81,6 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
               <th class="align-middle">Місце викрадення</th>
               <th class="align-middle">Деталі</th>
               <th class="align-middle">Контактна інформація</th>
-              <th></th>
             </tr>
           </thead>
           <tbody id="myTableBody">
@@ -92,7 +91,6 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
                     <td><?php echo htmlspecialchars($row['theft_place']) ?></td>
                     <td><?php echo htmlspecialchars($row['details']) ?></td>
                     <td><?php echo htmlspecialchars($row['contact_info']) ?></td>
-                    <td><a title="Видалити запис" data-toggle="tooltip" class="delete"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
             <?php endwhile; ?>
           </tbody>
@@ -128,16 +126,16 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
               <label for="bikeTheftDetails">Деталі про крадіжку</label>
               <textarea class="form-control" id="bikeTheftDetails" rows="4" name="theftDetails"></textarea>
           </div>
-          <div class="form-group">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inform" id="dontInformRadio" value="0">
-              <label class="form-check-label" for="dontInformRadio">Не повідомляти про крадіжку</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inform" id="informRadio" value="1">
-              <label class="form-check-label" for="informRadio">Повідомити про крадіжку</label>
-            </div>
-          </div>
+<!--          <div class="form-group">-->
+<!--            <div class="form-check form-check-inline">-->
+<!--              <input class="form-check-input" type="radio" name="inform" id="dontInformRadio" value="0">-->
+<!--              <label class="form-check-label" for="dontInformRadio">Не повідомляти про крадіжку</label>-->
+<!--            </div>-->
+<!--            <div class="form-check form-check-inline">-->
+<!--              <input class="form-check-input" type="radio" name="inform" id="informRadio" value="1">-->
+<!--              <label class="form-check-label" for="informRadio">Повідомити про крадіжку</label>-->
+<!--            </div>-->
+<!--          </div>-->
           <div class="form-group">
             <label for="contacts">Контактна інформація</label>
             <input type="tel" class="form-control" id="contacts" name="contacts">
@@ -160,7 +158,7 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
   <div class="row">
     <div id="histogramDiv" class="col-lg-8 col-sm-12"></div>
     <div class="col-lg-4 col-sm-12 text-center my-auto">
-      <h3 class="display-5">Спершу трішки статистики</h3>
+      <h3 class="">Спершу трішки статистики</h3>
       <p class="mb-0">Як ви можете бачити, чим кращий у вас замок тим більш захищений ваш велосипед :)</p>
       <p class="mb-1">Отож, ви самі вирішуєте долю свого вєліка</p>
       <canvas id="canvas"></canvas>

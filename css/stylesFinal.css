@@ -4,8 +4,8 @@ body {
 
 canvas {
     position: absolute;
-    left: 12vw;
-    margin:auto;
+    left: 10vh;
+    margin: auto;
 }
 
 .btn-circle {
