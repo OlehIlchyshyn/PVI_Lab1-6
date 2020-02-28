@@ -109,7 +109,7 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
         <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
       </div>
       <div class="modal-body">
-        <form action="http://example.com/app.php" method="get" target="_blank">
+        <form action="addrow.php" method="post">
           <div class="form-group">
             <label for="bikeName">Назва велосипеду</label>
             <input type="text" class="form-control" id="bikeName" name="bikeName">
@@ -166,8 +166,17 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
   </div>
 </div>
 
+<hr class="splitter">
+
+<div class="container">
+  <form action="data.php" method="post">
+    <button id="getData" type="button" class="btn btn-primary btn-block">Отримати пораду</button>
+  </form>
+  <div id="result" class="m-2"></div>
+</div>
+
 <a id="showAdvice" title="Показати пораду" data-toggle="tooltip" class="btn btn-primary btn-circle btn-lg">
-  <i class="fas fa-question"></i>
+    <i class="fas fa-question"></i>
 </a>
 
 <!-- Social networks and copyright -->
@@ -211,10 +220,11 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <!-- Custom JS -->
+<script src="js/getdata.js"
+<script src="js/ajax.js"></script>
 <script src="js/styles.js"></script>
 <script src="js/funcs.js"></script>
 <script src="js/graphics.js"></script>
-<script src="js/ajax.js"></script>
 <script src="js/theme.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#showAdvice").on("click", function () {
-        $.getJSON("https://api.adviceslip.com/advice", function (data) {
-            alert(data.slip.advice);
+        $.getJSON("https://official-joke-api.appspot.com/jokes/random", function (data) {
+            alert(data.setup + " " + data.punchline);
         });
     });
 });
